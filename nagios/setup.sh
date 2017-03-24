@@ -1,8 +1,10 @@
 #!/bin/bash
+
 sudo useradd nagios
 sudo groupadd nagcmd
 sudo usermod -a -G nagcmd nagios
 sudo apt-get update
+sudo apt-get install apache2
 sudo apt-get install build-essential libgd2-xpm-dev openssl libssl-dev xinetd apache2-utils unzip
 cd ~
 curl -L -O https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.1.1.tar.gz
